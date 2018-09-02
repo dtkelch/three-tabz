@@ -1,23 +1,22 @@
 import * as React from 'react';
-import './App.css';
-
+import { Tab, Tabs } from 'react-bootstrap';
 import { connect } from 'react-redux';
-
 import { simpleAction } from 'src/actions/simpleAction';
-import logo from './logo.svg';
 
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+        <Tab eventKey={1} title="Tab 1">
+          Tab 1 content
+        </Tab>
+        <Tab eventKey={2} title="Tab 2">
+          Tab 2 content
+        </Tab>
+        <Tab eventKey={3} title="Tab 3">
+          Tab 3 content
+        </Tab>
+      </Tabs>
     );
   }
 }
