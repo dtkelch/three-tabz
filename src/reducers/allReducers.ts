@@ -1,8 +1,11 @@
+import { SET_ACTIVE_TAB } from "../constants";
+
 export default (state = {}, action: any) => {
   switch (action.type) {
-   case 'SIMPLE_ACTION':
+   case SET_ACTIVE_TAB:
     return {
-     result: action.payload
+      ...state,
+     activeTab: action.payload
     }
    default:
     return state
