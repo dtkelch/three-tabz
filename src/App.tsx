@@ -1,6 +1,9 @@
 import * as React from 'react';
 import './App.css';
 
+import { connect } from 'react-redux';
+
+import { simpleAction } from 'src/actions/simpleAction';
 import logo from './logo.svg';
 
 class App extends React.Component {
@@ -19,4 +22,13 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state: any) => ({
+  ...state
+});
+
+const mapDispatchToProps = {
+  simpleAction,
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
