@@ -6,10 +6,11 @@ export default function configureStore(initialState = {
   currentTab: 0,
   tabData: [
     {
+      activePage: 0,
       data: [
         {
-          name: 'John',
           job: 'Striker',
+          name: 'John',
         },
         {
 
@@ -19,15 +20,14 @@ export default function configureStore(initialState = {
         },
       ],
       title: 'Ninjas',
-      activePage: 0,
     },
     {
-      data: [],
       activePage: 0,
+      data: [],
     },
     {
-      data: [],
       activePage: 0,
+      data: [],
     },
   ],
 }) {
