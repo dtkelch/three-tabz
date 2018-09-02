@@ -3,33 +3,9 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer';
 
 export default function configureStore(initialState = {
-  currentTab: 0,
-  tabData: [
-    {
-      activePage: 0,
-      data: [
-        {
-          job: 'Striker',
-          name: 'John',
-        },
-        {
-
-        },
-        {
-
-        },
-      ],
-      title: 'Ninjas',
-    },
-    {
-      activePage: 0,
-      data: [],
-    },
-    {
-      activePage: 0,
-      data: [],
-    },
-  ],
+  activeTab: 0,
+  data: [],
+  offset: 0,
 }) {
   return createStore(
     rootReducer,
